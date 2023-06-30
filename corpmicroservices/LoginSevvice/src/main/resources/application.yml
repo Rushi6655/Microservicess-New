@@ -1,0 +1,24 @@
+server:
+  port: 8000
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://192.168.0.30 :3306/rntdbuat
+    username: rnt_app_user
+    password: Random11Jun22
+  application:
+    name: LOGIN-SERVICE
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+
+  instance:
+    prefer-ip-address: true
