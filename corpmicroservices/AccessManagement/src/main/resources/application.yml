@@ -1,6 +1,5 @@
 server:
   port: 7000
-  
 spring:
   jpa:
     hibernate:
@@ -12,13 +11,5 @@ spring:
     password: Random11Jun22
   application:
     name: ACCESS-MANAGEMENT
-   
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:9000/eureka
-
-  instance:
-    prefer-ip-address: true
+  config:
+    import: "optional:configserver:http://localhost:8088"
