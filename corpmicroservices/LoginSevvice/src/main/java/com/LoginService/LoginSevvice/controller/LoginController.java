@@ -28,7 +28,6 @@ public class LoginController {
 		Employee employee= serviceImpl.getEmployeeById(obj.getUserId(),obj.getPassword());
 		if(employee!=null){
 			result.put("data",employee);
-			
 			result.put("status","Found");
 		}else{
 			result.put("data",new Employee());
